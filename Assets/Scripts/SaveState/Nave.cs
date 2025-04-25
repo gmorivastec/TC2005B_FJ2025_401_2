@@ -21,6 +21,21 @@ public class Nave : MonoBehaviour
             horizontal * Time.deltaTime * _speed,
             vertical * Time.deltaTime * _speed,
             0
-        );    
+        );
+
+
+        if(Input.GetButtonDown("Jump"))
+        {
+            print("DISPARANDO");
+            BalaPoolManager.Instance.GetObject(
+                transform.position,
+                transform.rotation
+            );
+
+            
+        }
+
+
+
     }
 }
